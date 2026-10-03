@@ -12,7 +12,7 @@
 
 TapeSafe
 
-## Project Description（已填部署信息；补上视频和 GitHub 链接再提交）
+## Project Description（部署、视频与 GitHub 链接已填）
 
 TapeSafe is an unaudited circuit-based approval-policy prototype on X Layer. A 74-NAND circuit implements minimum approval thresholds for up to five members, proposer-vote exclusion, optional mandatory signers and emergency freeze. The processor and policy circuit are deployed on X Layer. The demo compares live circuit evaluations with an interactive local execution of the same netlist. The repository contains exhaustive truth-table tests and a Solidity treasury executor validated in local and fork tests; the executor and vault are not deployed in this submission. DeWEB hosting is not used. Underlying protocol contracts remain upgradeable.
 
@@ -23,7 +23,8 @@ Circuit ID: 1
 CPU index: 267
 CreateCPU transaction: https://www.oklink.com/xlayer/tx/0x12431ca0427bf2e21bd69a3baf0396d5ab4f450caf4a45addcd3c5169b5d63df
 Tapeout transaction: https://www.oklink.com/xlayer/tx/0x92300b764d3c9c5c6ab1632cbdc242183f808ce606e5f8063d942ad9a8077f7a
-Demo video: https://github.com/kin684660-commits/TapeSafe/blob/main/docs/demo/TapeSafe-Demo-ZH-28s-1080p.mp4 (MP4 file; direct-access player link can be added after public playback verification)
+Demo video: https://kin684660-commits.github.io/TapeSafe/
+Original MP4: https://github.com/kin684660-commits/TapeSafe/blob/main/docs/demo/TapeSafe-Demo-ZH-28s-1080p.mp4
 GitHub: https://github.com/kin684660-commits/TapeSafe
 Evidence: https://github.com/kin684660-commits/TapeSafe/blob/main/docs/chain-evidence.json
 

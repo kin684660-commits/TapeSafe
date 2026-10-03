@@ -16,11 +16,11 @@ TapeSafe 是 X Layer 上的多签金库原型：审批状态由 Solidity 保存�
 
 [![TapeSafe 中文演示封面](docs/demo/TapeSafe-Demo-Poster.png)](https://github.com/kin684660-commits/TapeSafe/blob/main/docs/demo/TapeSafe-Demo-ZH-28s-1080p.mp4)
 
-[查看 / 下载 1080p MP4](https://github.com/kin684660-commits/TapeSafe/blob/main/docs/demo/TapeSafe-Demo-ZH-28s-1080p.mp4) · [字幕](docs/demo/TapeSafe-Demo-ZH.srt) · [可编辑 Remotion 工程](demo-video/README.md)
+[直接播放中文演示](https://kin684660-commits.github.io/TapeSafe/) · [查看 / 下载 1080p MP4](https://github.com/kin684660-commits/TapeSafe/blob/main/docs/demo/TapeSafe-Demo-ZH-28s-1080p.mp4) · [字幕](docs/demo/TapeSafe-Demo-ZH.srt) · [可编辑 Remotion 工程](demo-video/README.md)
 
 使用实际界面截图演示“两票通过、自批无效、紧急冻结”，并展示双 RPC 读取的真实主网结果。中文旁白与原创配乐，时长约 28 秒。截图剪辑中的实验室是浏览器网表执行，核验台是链上只读调用；执行器与金库本次未部署。
 
-如 GitHub 文件页没有内嵌播放器，请点击下载后播放。正式表单的视频字段优先使用经过未登录浏览器检查的公开视频播放器链接；仓库 MP4 同时保留为原始交付物。
+公开视频页：https://kin684660-commits.github.io/TapeSafe/ 。页面提供播放器，仓库 MP4 同时保留为原始交付物。
 
 ## X Layer 主网部署
 
@@ -138,7 +138,7 @@ npm run release
 
 prepare 只输出未签名交易并做模拟，不连接钱包、不广播。供应/单价/公开说明在 deployment/plan.json，签名前核对；脚本实时读取费用。交易签名与最终提交由项目方执行。
 
-verify:chain 默认核验处理器/电路，不要求容器；额外验证工厂登记、成功的流片交易网表字节与 Circuit ID。实际 createCPU 收据的处理器/电路配对仍需核对。
+verify:chain 默认核验处理器/电路，不要求容器；额外验证工厂登记、成功的流片交易网表字节与 Circuit ID，同时核对 createCPU 收据的处理器/电路配对、创建者与铸造参数。
 
 未来完整金库核验使用 `npm run verify:vault`，需 forge build 产物与真实 module/container 地址，不是本次提交步骤。
 

@@ -30,6 +30,7 @@ CPU #267，Circuit #1，已完成流片。处理器创建、74 个 NAND 单元�
 TapeSafe 的目标很直接：让团队审批不止是一串签名，还能看清楚到底按什么规则通过。
 
 GitHub：https://github.com/kin684660-commits/TapeSafe
+中文演示：https://kin684660-commits.github.io/TapeSafe/
 28 秒中文演示、源码、处理器地址和链上证据见仓库 README。
 
 #BEM #XLayer #TapeOut

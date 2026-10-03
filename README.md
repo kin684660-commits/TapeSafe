@@ -30,7 +30,7 @@ TapeSafe 将团队审批规则编译为真实的 TapeOut NAND 电路：支持最
 
 [创建交易](https://www.oklink.com/xlayer/tx/0x12431ca0427bf2e21bd69a3baf0396d5ab4f450caf4a45addcd3c5169b5d63df) · [铸造交易](https://www.oklink.com/xlayer/tx/0x84b299e7e65fadd1a5de331e8bc974ce54f45c6ee0f1aa53e83f737254eb755a) · [流片交易](https://www.oklink.com/xlayer/tx/0x92300b764d3c9c5c6ab1632cbdc242183f808ce606e5f8063d942ad9a8077f7a)
 
-[部署与交易清单](docs/SUBMISSION.md) · [链上核验记录](docs/chain-evidence.json) · [电路规格](docs/CIRCUIT.md) · [测试记录](docs/QA.md)
+[部署与交易清单](docs/MAINNET.md) · [链上核验记录](docs/chain-evidence.json) · [电路规格](docs/CIRCUIT.md) · [测试记录](docs/QA.md)
 
 ## 本地运行
 

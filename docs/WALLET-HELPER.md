@@ -30,4 +30,4 @@ node scripts/verify-chain.mjs --tapeout-tx 0xYOUR_TAPEOUT_TRANSACTION
 
 进度保存在当前浏览器的 localStorage，部署途中应保留同一浏览器的数据。导出记录包含公开地址和交易信息，不包含私钥或助记词。
 
-部署助手已有模拟钱包自动化测试，当前实例的三笔真实主网交易已保留在 [部署清单](SUBMISSION.md)。钱包扩展需要允许访问本地网址。
+部署助手已有模拟钱包自动化测试，当前实例的三笔真实主网交易已保留在 [部署清单](MAINNET.md)。钱包扩展需要允许访问本地网址。

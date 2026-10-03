@@ -11,7 +11,7 @@
     ["#/", "总览"],
     ["#/demo", "电路实验室"],
     ...(ready ? [["#/new", "发起"], ["#/log", "审计"]] : []),
-    ["#/verify", "评委核验"],
+    ["#/verify", "链上核验"],
     ["#/about", "说明"],
   ];
 
@@ -128,8 +128,8 @@
   function whyBody() {
     return `<section class="card"><h2>把审批规则变成可验证的电路</h2>
     <p>一名成员发起，其他成员批准。执行器将批准位、发起人、必签人、门槛和冻结位编码为 19 位输入。74 个 NAND 输出 1，才允许金库执行 CALL。</p>
-    <div class="row"><a class="chip" href="#/demo">打开电路实验室 →</a><a class="chip" href="#/verify">查看评委核验清单 →</a></div>
-    <p class="muted">当前 ${ready ? "已配置链上地址，仍需核验" : "为电路演示模式；执行器未配置，处理器与电路见评委核验页"}。DeWEB 是可选扩展；本地网页不具备链上完整性保证。</p></section>`;
+    <div class="row"><a class="chip" href="#/demo">打开电路实验室 →</a><a class="chip" href="#/verify">查看链上核验清单 →</a></div>
+    <p class="muted">当前 ${ready ? "已配置链上地址，仍需核验" : "为电路演示模式；执行器未配置，处理器与电路见链上核验页"}。DeWEB 是可选扩展；本地网页不具备链上完整性保证。</p></section>`;
   }
 
   function waitCard() {

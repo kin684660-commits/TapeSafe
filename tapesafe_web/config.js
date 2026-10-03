@@ -1,5 +1,5 @@
 // Verified X Layer mainnet processor and policy circuit, 2026-10-02.
-// Leave module/container blank for circuit-only submission.
+// Leave module/container blank for circuit-only deployment.
 // Leave them blank and the page shows the setup checklist instead of sending transactions.
 window.TAPESAFE = {
   chainId: 196,

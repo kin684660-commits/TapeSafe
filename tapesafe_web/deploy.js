@@ -69,14 +69,14 @@
   await identity();const pending=saved.pending;if(!pending)throw new Error('没有待检查交易');
   status('等待交易收据，请勿重复发送…');const receipt=await receiptFor(pending.hash);
   if(!receipt){status('交易尚未确认。稍后点击“继续检查已发送交易”。');return;}
-  if(BigInt(receipt.status)!==1n){saved.failed={...pending,receipt};delete saved.pending;save();throw new Error('交易失败，已保留记录；请将记录发给协作者排查');}
+  if(BigInt(receipt.status)!==1n){saved.failed={...pending,receipt};delete saved.pending;save();throw new Error('交易失败，已保留记录；请导出记录并检查交易收据');}
   const tx=await req('eth_getTransactionByHash',[pending.hash]);
   if(!tx||tx.from.toLowerCase()!==account.toLowerCase()||tx.to.toLowerCase()!==pending.tx.to.toLowerCase()||tx.input.toLowerCase()!==pending.tx.data.toLowerCase()||BigInt(tx.value)!==BigInt(pending.tx.value))throw new Error('交易内容与准备记录不符，停止自动处理');
   const block=receipt.blockNumber,result={transaction:pending.hash,blockNumber:block};
   if(pending.stage==='create'){
    const e=pending.expected;
    const registered=A.decodeAddress(await call(factory,A.encode('0x'+P.at,['uint256'],[e.index]),block));
-   if(registered.toLowerCase()!==e.circuits.toLowerCase())throw new Error('创建成功但模拟地址与实际工厂登记不一致。不要重建，请下载记录交由协作者解析收据。');
+   if(registered.toLowerCase()!==e.circuits.toLowerCase())throw new Error('创建成功但模拟地址与实际工厂登记不一致。请勿重复创建；导出记录并核对收据中的实际部署地址。');
    await code(e.circuits,block);await code(e.transistors,block);
    const emitters=new Set(receipt.logs.map(log=>log.address.toLowerCase()));
    if(!emitters.has(e.circuits.toLowerCase())||!emitters.has(e.transistors.toLowerCase()))throw new Error('创建收据未证明模拟的两合约均产生事件，需人工核对');
@@ -89,7 +89,7 @@
    const dims=[0,32,64,96].map(i=>Number(A.u256At(info,i)));if(JSON.stringify(dims)!=='[19,1,0,74]')throw new Error('电路规格不符');result.circuitInfo=dims;
    result.vectors={};for(const [input,want] of [['0x260001','01'],['0x260005','00']]){const out=await call(saved.create.circuits,A.encode('0x'+P.eval,['uint256','bytes'],[result.ruleId,input]),block);const value=A.hex(A.readBytes(A.hexToBytes(out),0));if(value!==want)throw new Error('电路求值不符');result.vectors[input]='0x'+value;}
   }
-  saved[pending.stage]=result;delete saved.pending;save();status(pending.stage==='tapeout'?'三步已完成！下载部署记录发给协作者核验。':'交易成功并已核对，请准备下一步。');
+  saved[pending.stage]=result;delete saved.pending;save();status(pending.stage==='tapeout'?'部署已完成。可下载部署记录并运行独立链上核验。':'交易成功并已核对，请准备下一步。');
  }
  async function sign(){
   await identity();const p=prepared;if(!p||busy||saved.pending)throw new Error('请先准备交易');

@@ -1,0 +1,9 @@
+我带着黑客松项目 TapeSafe 来了：支持 TapeOut，支持 X Layer！
+
+74 个 NAND，让团队审批规则变成真实电路：发起人不计票、必签成员、紧急冻结。
+
+X Layer 主网 CPU #267 / Circuit #1 已流片。源码与 28 秒中文演示：
+https://github.com/kin684660-commits/TapeSafe
+
+未审计原型，金库未部署。
+#BEM #XLayer #TapeOut

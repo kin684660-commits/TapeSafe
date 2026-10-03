@@ -1,0 +1,7 @@
+{
+  "name": "TapeSafe",
+  "symbol": "TSAFE",
+  "supply": "210000",
+  "mintPriceWei": "66000000000000",
+  "story": "TapeSafe: a 74-NAND approval policy circuit. Supply cap 210000; mint unit price 0.000066 OKB, protocol fees and gas still apply. Unaudited prototype. Mainnet scope: processor and policy circuit only; treasury executor is tested locally and on a fork, not deployed."
+}

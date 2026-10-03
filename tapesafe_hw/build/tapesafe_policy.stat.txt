@@ -1,0 +1,592 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.69+62 (git sha1 0edda7a3a, Release, Clang /workspace/YoWASP/yosys/wasi-sdk-33.0-x86_64-linux/share/cmake/../..//bin/clang++ 22.1.0)
+[90m
+[0m[90m-- Running command `read_verilog tapesafe_policy.v; synth -flatten -top tapesafe_policy; abc -g NAND; opt_clean; stat; write_blif tapesafe_policy.blif' --
+[0m
+[1m[36m1. [0m[1m[37mExecuting Verilog-2005 frontend: tapesafe_policy.v
+[0mParsing Verilog input from `tapesafe_policy.v' to AST representation.
+Generating RTLIL representation for module `\tapesafe_policy'.
+Successfully finished Verilog frontend.
+
+[1m[36m2. [0m[1m[37mExecuting SYNTH pass.
+[0m
+[1m[36m2.1. [0m[1m[37mExecuting HIERARCHY pass (managing design hierarchy).
+[0m
+[1m[36m2.1.1. [0m[1m[37mAnalyzing design hierarchy..
+[0mTop module:  \tapesafe_policy
+
+[1m[36m2.1.2. [0m[1m[37mAnalyzing design hierarchy..
+[0mTop module:  \tapesafe_policy
+Removed 0 unused modules.
+
+[1m[36m2.2. [0m[1m[37mExecuting PROC pass (convert processes to netlists).
+[0m
+[1m[36m2.2.1. [0m[1m[37mExecuting PROC_CLEAN pass (remove empty switches from decision trees).
+[0mCleaned up 0 empty switches.
+
+[1m[36m2.2.2. [0m[1m[37mExecuting PROC_RMDEAD pass (remove dead branches from decision trees).
+[0mRemoved a total of 0 dead cases.
+
+[1m[36m2.2.3. [0m[1m[37mExecuting PROC_PRUNE pass (remove redundant assignments in processes).
+[0mRemoved 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+[1m[36m2.2.4. [0m[1m[37mExecuting PROC_INIT pass (extract init attributes).
+[0m
+[1m[36m2.2.5. [0m[1m[37mExecuting PROC_ARST pass (detect async resets in processes).
+[0m
+[1m[36m2.2.6. [0m[1m[37mExecuting PROC_ROM pass (convert switches to ROMs).
+[0mConverted 0 switches.
+
+[1m[36m2.2.7. [0m[1m[37mExecuting PROC_MUX pass (convert decision trees to multiplexers).
+[0m
+[1m[36m2.2.8. [0m[1m[37mExecuting PROC_DLATCH pass (convert process syncs to latches).
+[0m
+[1m[36m2.2.9. [0m[1m[37mExecuting PROC_DFF pass (convert process syncs to FFs).
+[0m
+[1m[36m2.2.10. [0m[1m[37mExecuting PROC_MEMWR pass (convert process memory writes to cells).
+[0m
+[1m[36m2.2.11. [0m[1m[37mExecuting PROC_CLEAN pass (remove empty switches from decision trees).
+[0mCleaned up 0 empty switches.
+
+[1m[36m2.2.12. [0m[1m[37mExecuting OPT_EXPR pass (perform const folding).
+[0mOptimizing module tapesafe_policy.
+<suppressed ~1 debug messages>
+
+[1m[36m2.3. [0m[1m[37mExecuting CHECK pass (checking for obvious problems).
+[0mChecking module tapesafe_policy...
+Found and reported 0 problems.
+
+[1m[36m2.4. [0m[1m[37mExecuting FLATTEN pass (flatten design).
+[0m
+[1m[36m2.5. [0m[1m[37mExecuting OPT_EXPR pass (perform const folding).
+[0mOptimizing module tapesafe_policy.
+
+[1m[36m2.6. [0m[1m[37mExecuting CHECK pass (checking for obvious problems).
+[0mChecking module tapesafe_policy...
+Found and reported 0 problems.
+
+[1m[36m2.7. [0m[1m[37mExecuting OPT_CLEAN pass (remove unused cells and wires).
+[0mFinding unused cells or wires in module \tapesafe_policy..
+Removed 0 unused cells and 4 unused wires.
+<suppressed ~1 debug messages>
+
+[1m[36m2.8. [0m[1m[37mExecuting OPT pass (performing simple optimizations).
+[0m
+[1m[36m2.8.1. [0m[1m[37mExecuting OPT_EXPR pass (perform const folding).
+[0mOptimizing module tapesafe_policy.
+
+[1m[36m2.8.2. [0m[1m[37mExecuting OPT_MERGE pass (detect identical cells).
+[0mFinding identical cells in module `\tapesafe_policy'.
+Computing hashes of 14 cells of `\tapesafe_policy'.
+Finding duplicate cells in `\tapesafe_policy'.
+Removed a total of 0 cells.
+
+[1m[36m2.8.3. [0m[1m[37mExecuting OPT_MUXTREE pass (detect dead branches in mux trees).
+[0mRunning muxtree optimizer on module \tapesafe_policy..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+[1m[36m2.8.4. [0m[1m[37mExecuting OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+[0m  Optimizing cells in module \tapesafe_policy.
+Performed a total of 0 changes.
+
+[1m[36m2.8.5. [0m[1m[37mExecuting OPT_MERGE pass (detect identical cells).
+[0mFinding identical cells in module `\tapesafe_policy'.
+Computing hashes of 14 cells of `\tapesafe_policy'.
+Finding duplicate cells in `\tapesafe_policy'.
+Removed a total of 0 cells.
+
+[1m[36m2.8.6. [0m[1m[37mExecuting OPT_DFF pass (perform DFF optimizations).
+[0m
+[1m[36m2.8.7. [0m[1m[37mExecuting OPT_CLEAN pass (remove unused cells and wires).
+[0mFinding unused cells or wires in module \tapesafe_policy..
+
+[1m[36m2.8.8. [0m[1m[37mExecuting OPT_EXPR pass (perform const folding).
+[0mOptimizing module tapesafe_policy.
+
+[1m[36m2.8.9. [0m[1m[37mFinished fast OPT passes. (There is nothing left to do.)
+[0m
+[1m[36m2.9. [0m[1m[37mExecuting FSM pass (extract and optimize FSM).
+[0m
+[1m[36m2.9.1. [0m[1m[37mExecuting FSM_DETECT pass (finding FSMs in design).
+[0m
+[1m[36m2.9.2. [0m[1m[37mExecuting FSM_EXTRACT pass (extracting FSM from design).
+[0m
+[1m[36m2.9.3. [0m[1m[37mExecuting FSM_OPT pass (simple optimizations of FSMs).
+[0m
+[1m[36m2.9.4. [0m[1m[37mExecuting OPT_CLEAN pass (remove unused cells and wires).
+[0mFinding unused cells or wires in module \tapesafe_policy..
+
+[1m[36m2.9.5. [0m[1m[37mExecuting FSM_OPT pass (simple optimizations of FSMs).
+[0m
+[1m[36m2.9.6. [0m[1m[37mExecuting FSM_RECODE pass (re-assigning FSM state encoding).
+[0m
+[1m[36m2.9.7. [0m[1m[37mExecuting FSM_INFO pass (dumping all available information on FSM cells).
+[0m
+[1m[36m2.9.8. [0m[1m[37mExecuting FSM_MAP pass (mapping FSMs to basic logic).
+[0m
+[1m[36m2.10. [0m[1m[37mExecuting OPT pass (performing simple optimizations).
+[0m
+[1m[36m2.10.1. [0m[1m[37mExecuting OPT_EXPR pass (perform const folding).
+[0mOptimizing module tapesafe_policy.
+
+[1m[36m2.10.2. [0m[1m[37mExecuting OPT_MERGE pass (detect identical cells).
+[0mFinding identical cells in module `\tapesafe_policy'.
+Computing hashes of 14 cells of `\tapesafe_policy'.
+Finding duplicate cells in `\tapesafe_policy'.
+Removed a total of 0 cells.
+
+[1m[36m2.10.3. [0m[1m[37mExecuting OPT_MUXTREE pass (detect dead branches in mux trees).
+[0mRunning muxtree optimizer on module \tapesafe_policy..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+[1m[36m2.10.4. [0m[1m[37mExecuting OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+[0m  Optimizing cells in module \tapesafe_policy.
+Performed a total of 0 changes.
+
+[1m[36m2.10.5. [0m[1m[37mExecuting OPT_MERGE pass (detect identical cells).
+[0mFinding identical cells in module `\tapesafe_policy'.
+Computing hashes of 14 cells of `\tapesafe_policy'.
+Finding duplicate cells in `\tapesafe_policy'.
+Removed a total of 0 cells.
+
+[1m[36m2.10.6. [0m[1m[37mExecuting OPT_DFF pass (perform DFF optimizations).
+[0m
+[1m[36m2.10.7. [0m[1m[37mExecuting OPT_CLEAN pass (remove unused cells and wires).
+[0mFinding unused cells or wires in module \tapesafe_policy..
+
+[1m[36m2.10.8. [0m[1m[37mExecuting OPT_EXPR pass (perform const folding).
+[0mOptimizing module tapesafe_policy.
+
+[1m[36m2.10.9. [0m[1m[37mFinished fast OPT passes. (There is nothing left to do.)
+[0m
+[1m[36m2.11. [0m[1m[37mExecuting WREDUCE pass (reducing word size of cells).
+[0mRemoved top 1 bits (of 3) from port Y of cell tapesafe_policy.$add$tapesafe_policy.v:12$3 ($add).
+Removed top 1 bits (of 3) from port A of cell tapesafe_policy.$add$tapesafe_policy.v:12$4 ($add).
+Removed top 1 bits (of 3) from wire tapesafe_policy.$add$tapesafe_policy.v:12$3_Y.
+
+[1m[36m2.12. [0m[1m[37mExecuting PEEPOPT pass (run peephole optimizers).
+[0m
+[1m[36m2.13. [0m[1m[37mExecuting OPT_CLEAN pass (remove unused cells and wires).
+[0mFinding unused cells or wires in module \tapesafe_policy..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+[1m[36m2.14. [0m[1m[37mExecuting ALUMACC pass (create $alu and $macc cells).
+[0mExtracting $alu and $macc cells in module tapesafe_policy:
+  creating $macc model for $add$tapesafe_policy.v:12$6 ($add).
+  creating $macc model for $add$tapesafe_policy.v:12$5 ($add).
+  creating $macc model for $add$tapesafe_policy.v:12$4 ($add).
+  creating $macc model for $add$tapesafe_policy.v:12$3 ($add).
+  merging $macc model for $add$tapesafe_policy.v:12$3 into $add$tapesafe_policy.v:12$4.
+  merging $macc model for $add$tapesafe_policy.v:12$4 into $add$tapesafe_policy.v:12$5.
+  merging $macc model for $add$tapesafe_policy.v:12$5 into $add$tapesafe_policy.v:12$6.
+  creating $macc cell for $add$tapesafe_policy.v:12$6: $auto$alumacc.cc:399:replace_macc$16
+  creating $alu model for $ge$tapesafe_policy.v:14$12 ($ge): new $alu
+  creating $alu cell for $ge$tapesafe_policy.v:14$12: $auto$alumacc.cc:548:replace_alu$18
+  created 1 $alu and 1 $macc cells.
+
+[1m[36m2.15. [0m[1m[37mExecuting SHARE pass (SAT-based resource sharing).
+[0m
+[1m[36m2.16. [0m[1m[37mExecuting OPT pass (performing simple optimizations).
+[0m
+[1m[36m2.16.1. [0m[1m[37mExecuting OPT_EXPR pass (perform const folding).
+[0mOptimizing module tapesafe_policy.
+
+[1m[36m2.16.2. [0m[1m[37mExecuting OPT_MERGE pass (detect identical cells).
+[0mFinding identical cells in module `\tapesafe_policy'.
+Computing hashes of 19 cells of `\tapesafe_policy'.
+Finding duplicate cells in `\tapesafe_policy'.
+Removed a total of 0 cells.
+
+[1m[36m2.16.3. [0m[1m[37mExecuting OPT_MUXTREE pass (detect dead branches in mux trees).
+[0mRunning muxtree optimizer on module \tapesafe_policy..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+[1m[36m2.16.4. [0m[1m[37mExecuting OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+[0m  Optimizing cells in module \tapesafe_policy.
+Performed a total of 0 changes.
+
+[1m[36m2.16.5. [0m[1m[37mExecuting OPT_MERGE pass (detect identical cells).
+[0mFinding identical cells in module `\tapesafe_policy'.
+Computing hashes of 19 cells of `\tapesafe_policy'.
+Finding duplicate cells in `\tapesafe_policy'.
+Removed a total of 0 cells.
+
+[1m[36m2.16.6. [0m[1m[37mExecuting OPT_DFF pass (perform DFF optimizations).
+[0m
+[1m[36m2.16.7. [0m[1m[37mExecuting OPT_CLEAN pass (remove unused cells and wires).
+[0mFinding unused cells or wires in module \tapesafe_policy..
+Removed 3 unused cells and 4 unused wires.
+<suppressed ~4 debug messages>
+
+[1m[36m2.16.8. [0m[1m[37mExecuting OPT_EXPR pass (perform const folding).
+[0mOptimizing module tapesafe_policy.
+
+[1m[36m2.16.9. [0m[1m[37mRerunning OPT passes. (Maybe there is more to do..)
+[0m
+[1m[36m2.16.10. [0m[1m[37mExecuting OPT_MUXTREE pass (detect dead branches in mux trees).
+[0mRunning muxtree optimizer on module \tapesafe_policy..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+[1m[36m2.16.11. [0m[1m[37mExecuting OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+[0m  Optimizing cells in module \tapesafe_policy.
+Performed a total of 0 changes.
+
+[1m[36m2.16.12. [0m[1m[37mExecuting OPT_MERGE pass (detect identical cells).
+[0mFinding identical cells in module `\tapesafe_policy'.
+Computing hashes of 16 cells of `\tapesafe_policy'.
+Finding duplicate cells in `\tapesafe_policy'.
+Removed a total of 0 cells.
+
+[1m[36m2.16.13. [0m[1m[37mExecuting OPT_DFF pass (perform DFF optimizations).
+[0m
+[1m[36m2.16.14. [0m[1m[37mExecuting OPT_CLEAN pass (remove unused cells and wires).
+[0mFinding unused cells or wires in module \tapesafe_policy..
+
+[1m[36m2.16.15. [0m[1m[37mExecuting OPT_EXPR pass (perform const folding).
+[0mOptimizing module tapesafe_policy.
+
+[1m[36m2.16.16. [0m[1m[37mFinished fast OPT passes. (There is nothing left to do.)
+[0m
+[1m[36m2.17. [0m[1m[37mExecuting MEMORY pass.
+[0m
+[1m[36m2.17.1. [0m[1m[37mExecuting OPT_MEM pass (optimize memories).
+[0mPerformed a total of 0 transformations.
+
+[1m[36m2.17.2. [0m[1m[37mExecuting OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+[0mPerformed a total of 0 transformations.
+
+[1m[36m2.17.3. [0m[1m[37mExecuting OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+[0m
+[1m[36m2.17.4. [0m[1m[37mExecuting MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+[0m
+[1m[36m2.17.5. [0m[1m[37mExecuting MEMORY_DFF pass (merging $dff cells to $memrd).
+[0m
+[1m[36m2.17.6. [0m[1m[37mExecuting OPT_CLEAN pass (remove unused cells and wires).
+[0mFinding unused cells or wires in module \tapesafe_policy..
+
+[1m[36m2.17.7. [0m[1m[37mExecuting MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+[0m
+[1m[36m2.17.8. [0m[1m[37mExecuting OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+[0mPerformed a total of 0 transformations.
+
+[1m[36m2.17.9. [0m[1m[37mExecuting OPT_CLEAN pass (remove unused cells and wires).
+[0mFinding unused cells or wires in module \tapesafe_policy..
+
+[1m[36m2.17.10. [0m[1m[37mExecuting MEMORY_COLLECT pass (generating $mem cells).
+[0m
+[1m[36m2.18. [0m[1m[37mExecuting OPT_CLEAN pass (remove unused cells and wires).
+[0mFinding unused cells or wires in module \tapesafe_policy..
+
+[1m[36m2.19. [0m[1m[37mExecuting OPT pass (performing simple optimizations).
+[0m
+[1m[36m2.19.1. [0m[1m[37mExecuting OPT_EXPR pass (perform const folding).
+[0mOptimizing module tapesafe_policy.
+
+[1m[36m2.19.2. [0m[1m[37mExecuting OPT_MERGE pass (detect identical cells).
+[0mFinding identical cells in module `\tapesafe_policy'.
+Computing hashes of 16 cells of `\tapesafe_policy'.
+Finding duplicate cells in `\tapesafe_policy'.
+Removed a total of 0 cells.
+
+[1m[36m2.19.3. [0m[1m[37mExecuting OPT_DFF pass (perform DFF optimizations).
+[0m
+[1m[36m2.19.4. [0m[1m[37mExecuting OPT_CLEAN pass (remove unused cells and wires).
+[0mFinding unused cells or wires in module \tapesafe_policy..
+
+[1m[36m2.19.5. [0m[1m[37mFinished fast OPT passes.
+[0m
+[1m[36m2.20. [0m[1m[37mExecuting MEMORY_MAP pass (converting memories to logic and flip-flops).
+[0m
+[1m[36m2.21. [0m[1m[37mExecuting OPT pass (performing simple optimizations).
+[0m
+[1m[36m2.21.1. [0m[1m[37mExecuting OPT_EXPR pass (perform const folding).
+[0mOptimizing module tapesafe_policy.
+
+[1m[36m2.21.2. [0m[1m[37mExecuting OPT_MERGE pass (detect identical cells).
+[0mFinding identical cells in module `\tapesafe_policy'.
+Computing hashes of 16 cells of `\tapesafe_policy'.
+Finding duplicate cells in `\tapesafe_policy'.
+Removed a total of 0 cells.
+
+[1m[36m2.21.3. [0m[1m[37mExecuting OPT_MUXTREE pass (detect dead branches in mux trees).
+[0mRunning muxtree optimizer on module \tapesafe_policy..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+[1m[36m2.21.4. [0m[1m[37mExecuting OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+[0m  Optimizing cells in module \tapesafe_policy.
+Performed a total of 0 changes.
+
+[1m[36m2.21.5. [0m[1m[37mExecuting OPT_MERGE pass (detect identical cells).
+[0mFinding identical cells in module `\tapesafe_policy'.
+Computing hashes of 16 cells of `\tapesafe_policy'.
+Finding duplicate cells in `\tapesafe_policy'.
+Removed a total of 0 cells.
+
+[1m[36m2.21.6. [0m[1m[37mExecuting OPT_SHARE pass.
+[0m
+[1m[36m2.21.7. [0m[1m[37mExecuting OPT_DFF pass (perform DFF optimizations).
+[0m
+[1m[36m2.21.8. [0m[1m[37mExecuting OPT_CLEAN pass (remove unused cells and wires).
+[0mFinding unused cells or wires in module \tapesafe_policy..
+
+[1m[36m2.21.9. [0m[1m[37mExecuting OPT_EXPR pass (perform const folding).
+[0mOptimizing module tapesafe_policy.
+
+[1m[36m2.21.10. [0m[1m[37mFinished fast OPT passes. (There is nothing left to do.)
+[0m
+[1m[36m2.22. [0m[1m[37mExecuting TECHMAP pass (map to technology primitives).
+[0m
+[1m[36m2.22.1. [0m[1m[37mExecuting Verilog-2005 frontend: /share/techmap.v
+[0mParsing Verilog input from `/share/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+[1m[36m2.22.2. [0m[1m[37mContinuing TECHMAP pass.
+[0mUsing extmapper simplemap for cells of type $reduce_or.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $or.
+Using extmapper simplemap for cells of type $reduce_and.
+Using template $paramod$78e969f2586efcf3a5b0b0440bcca0db83d5cca2\_90_alu for cells of type $alu.
+Using extmapper maccmap for cells of type $macc_v2.
+  add \eff [0] (1 bits, unsigned)
+  add \eff [4] (1 bits, unsigned)
+  add \eff [3] (1 bits, unsigned)
+  add \eff [2] (1 bits, unsigned)
+  add \eff [1] (1 bits, unsigned)
+  packed 2 (2) bits / 2 words into adder tree
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $eq.
+Using extmapper simplemap for cells of type $reduce_bool.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000000001 for cells of type $fa.
+Using extmapper simplemap for cells of type $xor.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000000011 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000000011 for cells of type $lcu.
+Using extmapper simplemap for cells of type $pos.
+Using extmapper simplemap for cells of type $mux.
+No more expansions possible.
+<suppressed ~260 debug messages>
+
+[1m[36m2.23. [0m[1m[37mExecuting OPT pass (performing simple optimizations).
+[0m
+[1m[36m2.23.1. [0m[1m[37mExecuting OPT_EXPR pass (perform const folding).
+[0mOptimizing module tapesafe_policy.
+<suppressed ~37 debug messages>
+
+[1m[36m2.23.2. [0m[1m[37mExecuting OPT_MERGE pass (detect identical cells).
+[0mFinding identical cells in module `\tapesafe_policy'.
+Computing hashes of 68 cells of `\tapesafe_policy'.
+Finding duplicate cells in `\tapesafe_policy'.
+Removed a total of 0 cells.
+
+[1m[36m2.23.3. [0m[1m[37mExecuting OPT_DFF pass (perform DFF optimizations).
+[0m
+[1m[36m2.23.4. [0m[1m[37mExecuting OPT_CLEAN pass (remove unused cells and wires).
+[0mFinding unused cells or wires in module \tapesafe_policy..
+Removed 5 unused cells and 95 unused wires.
+<suppressed ~6 debug messages>
+
+[1m[36m2.23.5. [0m[1m[37mFinished fast OPT passes.
+[0m
+[1m[36m2.24. [0m[1m[37mExecuting ABC pass (technology mapping using ABC).
+[0m
+[1m[36m2.24.1. [0m[1m[37mSummary of detected clock domains:
+[0m  63 cells in clk={ }, en={ }, arst={ }, srst={ }
+
+[1m[36m2.24.2. [0m[1m[37mExtracting gate netlist of module `\tapesafe_policy' to `<abc-temp-dir>/input.blif'..
+[0mNo matching clock domain found. Not extracting any FF cells.
+
+[1m[36m2.24.2.1. [0m[1m[37mExecuted ABC.
+[0mExtracted 63 gates and 82 wires to a netlist network with 19 inputs and 1 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+[1m[36m2.24.2.2. [0m[1m[37mRe-integrating ABC results.
+[0mABC RESULTS:               AND cells:       11
+ABC RESULTS:            ANDNOT cells:        3
+ABC RESULTS:              NAND cells:        8
+ABC RESULTS:               NOR cells:        3
+ABC RESULTS:                OR cells:        5
+ABC RESULTS:             ORNOT cells:        7
+ABC RESULTS:              XNOR cells:        2
+ABC RESULTS:        internal signals:       62
+ABC RESULTS:           input signals:       19
+ABC RESULTS:          output signals:        1
+Removing temp directory.
+Removing global temp directory.
+
+[1m[36m2.25. [0m[1m[37mExecuting OPT pass (performing simple optimizations).
+[0m
+[1m[36m2.25.1. [0m[1m[37mExecuting OPT_EXPR pass (perform const folding).
+[0mOptimizing module tapesafe_policy.
+
+[1m[36m2.25.2. [0m[1m[37mExecuting OPT_MERGE pass (detect identical cells).
+[0mFinding identical cells in module `\tapesafe_policy'.
+Computing hashes of 39 cells of `\tapesafe_policy'.
+Finding duplicate cells in `\tapesafe_policy'.
+Removed a total of 0 cells.
+
+[1m[36m2.25.3. [0m[1m[37mExecuting OPT_DFF pass (perform DFF optimizations).
+[0m
+[1m[36m2.25.4. [0m[1m[37mExecuting OPT_CLEAN pass (remove unused cells and wires).
+[0mFinding unused cells or wires in module \tapesafe_policy..
+Removed 0 unused cells and 55 unused wires.
+<suppressed ~4 debug messages>
+
+[1m[36m2.25.5. [0m[1m[37mFinished fast OPT passes.
+[0m
+[1m[36m2.26. [0m[1m[37mExecuting HIERARCHY pass (managing design hierarchy).
+[0mAttribute `top' found on module `tapesafe_policy'. Setting top module to tapesafe_policy.
+
+[1m[36m2.26.1. [0m[1m[37mAnalyzing design hierarchy..
+[0mTop module:  \tapesafe_policy
+
+[1m[36m2.26.2. [0m[1m[37mAnalyzing design hierarchy..
+[0mTop module:  \tapesafe_policy
+Removed 0 unused modules.
+
+[1m[36m2.27. [0m[1m[37mPrinting statistics.
+[0m
+=== tapesafe_policy ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       44 wires
+       58 wire bits
+        6 public wires
+       20 public wire bits
+        6 ports
+       20 port bits
+       39 cells
+        3   $_ANDNOT_
+       11   $_AND_
+        8   $_NAND_
+        3   $_NOR_
+        7   $_ORNOT_
+        5   $_OR_
+        2   $_XNOR_
+
+[1m[36m2.28. [0m[1m[37mExecuting CHECK pass (checking for obvious problems).
+[0mChecking module tapesafe_policy...
+Found and reported 0 problems.
+
+[1m[36m3. [0m[1m[37mExecuting ABC pass (technology mapping using ABC).
+[0m
+[1m[36m3.1. [0m[1m[37mSummary of detected clock domains:
+[0m  39 cells in clk={ }, en={ }, arst={ }, srst={ }
+
+[1m[36m3.2. [0m[1m[37mExtracting gate netlist of module `\tapesafe_policy' to `<abc-temp-dir>/input.blif'..
+[0mNo matching clock domain found. Not extracting any FF cells.
+
+[1m[36m3.2.1. [0m[1m[37mExecuted ABC.
+[0mExtracted 39 gates and 58 wires to a netlist network with 19 inputs and 1 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+[1m[36m3.2.2. [0m[1m[37mRe-integrating ABC results.
+[0mABC RESULTS:              NAND cells:       41
+ABC RESULTS:               NOT cells:       31
+ABC RESULTS:        internal signals:       38
+ABC RESULTS:           input signals:       19
+ABC RESULTS:          output signals:        1
+Removing temp directory.
+Removing global temp directory.
+
+[1m[36m4. [0m[1m[37mExecuting OPT_CLEAN pass (remove unused cells and wires).
+[0mFinding unused cells or wires in module \tapesafe_policy..
+Removed 0 unused cells and 58 unused wires.
+<suppressed ~1 debug messages>
+
+[1m[36m5. [0m[1m[37mPrinting statistics.
+[0m
+=== tapesafe_policy ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       77 wires
+       91 wire bits
+        6 public wires
+       20 public wire bits
+        6 ports
+       20 port bits
+       72 cells
+       41   $_NAND_
+       31   $_NOT_
+
+[1m[36m6. [0m[1m[37mExecuting BLIF backend.
+[0m
+End of script. Logfile hash: 924206ae0b, time: 0.17s, user: 0.18s, system: 0.00s
+Yosys 0.69+62 (git sha1 0edda7a3a, Release, Clang /workspace/YoWASP/yosys/wasi-sdk-33.0-x86_64-linux/share/cmake/../..//bin/clang++ 22.1.0)
+Time spent: 48% 2x abc (0 sec), 12% 1x techmap (0 sec), ...

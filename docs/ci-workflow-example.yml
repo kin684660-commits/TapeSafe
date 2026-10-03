@@ -1,0 +1,30 @@
+name: Verify TapeSafe
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - uses: foundry-rs/foundry-toolchain@v1
+        with:
+          version: v1.7.1
+      - run: npm test
+      - run: npm run test:hardware
+      - run: forge test -vv
+        working-directory: tapesafe_contracts
+      - run: npm run test:abi
+  fork:
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: foundry-rs/foundry-toolchain@v1
+        with:
+          version: v1.7.1
+      - run: forge test --match-contract TapeSafeFork --fork-url https://xlayerrpc.okx.com -vv
+        working-directory: tapesafe_contracts

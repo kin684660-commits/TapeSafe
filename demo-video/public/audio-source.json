@@ -1,0 +1,43 @@
+{
+  "music": "Original procedural TapeSafe score; no reference audio sampled.",
+  "seed": 267,
+  "duration": 28,
+  "narration": "Microsoft Edge zh-CN-XiaoxiaoNeural synthetic voice",
+  "segments": [
+    {
+      "file": "voice-1.wav",
+      "text": "团队审批，能不能公开验证？",
+      "rate": "+10%"
+    },
+    {
+      "file": "voice-2.wav",
+      "text": "TapeSafe，把审批规则做成真正的电路。",
+      "rate": "+15%"
+    },
+    {
+      "file": "voice-3a.wav",
+      "text": "两票，通过。",
+      "rate": "+0%"
+    },
+    {
+      "file": "voice-3b.wav",
+      "text": "自批，无效。",
+      "rate": "+15%"
+    },
+    {
+      "file": "voice-3c.wav",
+      "text": "冻结，直接拒绝。",
+      "rate": "+20%"
+    },
+    {
+      "file": "voice-4.wav",
+      "text": "处理器和电路，已经部署在 X Layer 主网。四组结果，双节点核对。",
+      "rate": "+20%"
+    },
+    {
+      "file": "voice-5.wav",
+      "text": "让每一次团队审批，都有清晰、可信的规则。",
+      "rate": "+5%"
+    }
+  ]
+}

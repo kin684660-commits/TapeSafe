@@ -1,0 +1,51 @@
+{
+  "mode": "processor-and-circuit",
+  "verifiedAt": "2026-10-02T12:52:42.468Z",
+  "chainId": 196,
+  "block": "0x44d5384",
+  "blockHash": "0x1f4140788818dac963102f695ff98ba1884037d64835c1ede966f9c8c2eb061e",
+  "processor": "0x7e33ea21cc11929b48b339735a61c2d4b8aed708",
+  "circuits": "0xe10931e0cfb42c76ced25b4712e7553f24a3d9e9",
+  "ruleId": "1",
+  "cpuIndex": "267",
+  "sha256": "202a95c89f93d41aad748732e5f9614a0e61bc3add1eb0aa6d678fccf111ebc9",
+  "checks": {
+    "transistorsCodeBytes": 295,
+    "circuitsCodeBytes": 295,
+    "circuitInfo": [
+      19,
+      1,
+      0,
+      74
+    ],
+    "vectors": {
+      "0x260001": "0x01",
+      "0x260005": "0x00",
+      "0x220001": "0x00",
+      "0x230001": "0x00"
+    },
+    "factoryRegistration": true,
+    "nftOwner": "0x375abb0e951addda5538e38ac5bcfce814a14752",
+    "deploymentTransactions": {
+      "create": {
+        "hash": "0x12431ca0427bf2e21bd69a3baf0396d5ab4f450caf4a45addcd3c5169b5d63df",
+        "blockNumber": "0x44d4cc8",
+        "status": "success"
+      },
+      "mint": {
+        "hash": "0x84b299e7e65fadd1a5de331e8bc974ce54f45c6ee0f1aa53e83f737254eb755a",
+        "blockNumber": "0x44d4ea7",
+        "status": "success"
+      }
+    },
+    "factoryPairingAndDeployer": true,
+    "mintPriceWei": "66000000000000",
+    "tapeoutTransaction": "0x92300b764d3c9c5c6ab1632cbdc242183f808ce606e5f8063d942ad9a8077f7a",
+    "netlistBytesMatch": true,
+    "mintedCircuitIdMatches": true
+  },
+  "limitations": [
+    "No vault or executor is claimed deployed.",
+    "Sample eval vectors are not a complete proof of chain behavior; protocol remains upgradeable."
+  ]
+}

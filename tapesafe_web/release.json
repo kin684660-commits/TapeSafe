@@ -1,0 +1,42 @@
+{
+  "name": "TapeSafe",
+  "version": "0.5.0",
+  "status": "unaudited prototype",
+  "files": [
+    "deploy.html",
+    "deploy.js",
+    "deploy-core.js",
+    "index.html",
+    "app.css",
+    "app.js",
+    "abi.js",
+    "config.js",
+    "policy.js",
+    "demo.js",
+    "img/processor-hero.png",
+    "img/approval-tokens.png",
+    "img/freeze-core.png",
+    "img/title.jpg",
+    "img/board.jpg",
+    "img/gate.jpg"
+  ],
+  "sha256": {
+    "deploy.html": "65da9bf0fed844ddf023be5ab1e6fbd73885235ced1b9c028a338a46a639a471",
+    "deploy.js": "14ae9b5b1d1367992edbcb09c4a00191906782ecf76c476664a62a670d70159f",
+    "deploy-core.js": "4440818879d28b099f03da271d34beb0d338fcd8f647106ba9fdd2fc0b0ebba0",
+    "index.html": "a6044cb48c9a0214661d9aee7d30ec2d67899fcfac76802129580e02325ff404",
+    "app.css": "37cff954243571f4c7b96b228eeb486e456491c1c17490d968537ed4f520e7e5",
+    "app.js": "59b376eb440f9592f0ebe51b7921c61c1160149c6fec7282a6b834ea77cb392f",
+    "abi.js": "e615b55d1ebedb44d9bda96b5160f047778baa5fd9653b5c294680f82780d303",
+    "config.js": "43d118a19e3254f390d442692f16f378a8146c72acbf171d71920577adcc73d1",
+    "policy.js": "133d64187f0f7c84a4fe0ee355736e0da6b82395bba828f956a6e993bef60a12",
+    "demo.js": "bd6533692689f86d2a36f2a8e09fb9800b977dcccf2096ec8d7e05b0cd84a051",
+    "img/processor-hero.png": "ad96dd2ad7f0d6f85134b6f31905d7158671701d17325bb776af0b2bd448884d",
+    "img/approval-tokens.png": "65f0cc99c903e15d21f31569bcb6574a576a97f23832a8d8413bc9efa08e138b",
+    "img/freeze-core.png": "4da4745a4a133a7a9ab14dcd7f49b8e5388ac243f1e1871a6a4adda45422770f",
+    "img/title.jpg": "c2f2bcb086ead1dd53b71205edfd21bf568f6811cd39d61adada46ed0460c5b5",
+    "img/board.jpg": "e005b9b99873df39c8550199ea9abc2989f3a4e842e5a7cd6b2248f112af6e47",
+    "img/gate.jpg": "a178e943966c9a89f94f85a1f225946e48bc4013adda5a6ef165fdff03dd500f"
+  },
+  "note": "Local release manifest only; not proof of on-chain hosting or a trusted bootstrap. Regenerate after editing config.js."
+}

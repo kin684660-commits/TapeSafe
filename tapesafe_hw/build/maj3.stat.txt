@@ -1,0 +1,516 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.69+62 (git sha1 0edda7a3a, Release, Clang /workspace/YoWASP/yosys/wasi-sdk-33.0-x86_64-linux/share/cmake/../..//bin/clang++ 22.1.0)
+[90m
+[0m[90m-- Running command `read_verilog maj3.v; synth -flatten -top maj3; abc -g NAND; opt_clean; stat; write_blif maj3.blif' --
+[0m
+[1m[36m1. [0m[1m[37mExecuting Verilog-2005 frontend: maj3.v
+[0mParsing Verilog input from `maj3.v' to AST representation.
+Generating RTLIL representation for module `\maj3'.
+Successfully finished Verilog frontend.
+
+[1m[36m2. [0m[1m[37mExecuting SYNTH pass.
+[0m
+[1m[36m2.1. [0m[1m[37mExecuting HIERARCHY pass (managing design hierarchy).
+[0m
+[1m[36m2.1.1. [0m[1m[37mAnalyzing design hierarchy..
+[0mTop module:  \maj3
+
+[1m[36m2.1.2. [0m[1m[37mAnalyzing design hierarchy..
+[0mTop module:  \maj3
+Removed 0 unused modules.
+
+[1m[36m2.2. [0m[1m[37mExecuting PROC pass (convert processes to netlists).
+[0m
+[1m[36m2.2.1. [0m[1m[37mExecuting PROC_CLEAN pass (remove empty switches from decision trees).
+[0mCleaned up 0 empty switches.
+
+[1m[36m2.2.2. [0m[1m[37mExecuting PROC_RMDEAD pass (remove dead branches from decision trees).
+[0mRemoved a total of 0 dead cases.
+
+[1m[36m2.2.3. [0m[1m[37mExecuting PROC_PRUNE pass (remove redundant assignments in processes).
+[0mRemoved 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+[1m[36m2.2.4. [0m[1m[37mExecuting PROC_INIT pass (extract init attributes).
+[0m
+[1m[36m2.2.5. [0m[1m[37mExecuting PROC_ARST pass (detect async resets in processes).
+[0m
+[1m[36m2.2.6. [0m[1m[37mExecuting PROC_ROM pass (convert switches to ROMs).
+[0mConverted 0 switches.
+
+[1m[36m2.2.7. [0m[1m[37mExecuting PROC_MUX pass (convert decision trees to multiplexers).
+[0m
+[1m[36m2.2.8. [0m[1m[37mExecuting PROC_DLATCH pass (convert process syncs to latches).
+[0m
+[1m[36m2.2.9. [0m[1m[37mExecuting PROC_DFF pass (convert process syncs to FFs).
+[0m
+[1m[36m2.2.10. [0m[1m[37mExecuting PROC_MEMWR pass (convert process memory writes to cells).
+[0m
+[1m[36m2.2.11. [0m[1m[37mExecuting PROC_CLEAN pass (remove empty switches from decision trees).
+[0mCleaned up 0 empty switches.
+
+[1m[36m2.2.12. [0m[1m[37mExecuting OPT_EXPR pass (perform const folding).
+[0mOptimizing module maj3.
+
+[1m[36m2.3. [0m[1m[37mExecuting CHECK pass (checking for obvious problems).
+[0mChecking module maj3...
+Found and reported 0 problems.
+
+[1m[36m2.4. [0m[1m[37mExecuting FLATTEN pass (flatten design).
+[0m
+[1m[36m2.5. [0m[1m[37mExecuting OPT_EXPR pass (perform const folding).
+[0mOptimizing module maj3.
+
+[1m[36m2.6. [0m[1m[37mExecuting CHECK pass (checking for obvious problems).
+[0mChecking module maj3...
+Found and reported 0 problems.
+
+[1m[36m2.7. [0m[1m[37mExecuting OPT_CLEAN pass (remove unused cells and wires).
+[0mFinding unused cells or wires in module \maj3..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+[1m[36m2.8. [0m[1m[37mExecuting OPT pass (performing simple optimizations).
+[0m
+[1m[36m2.8.1. [0m[1m[37mExecuting OPT_EXPR pass (perform const folding).
+[0mOptimizing module maj3.
+
+[1m[36m2.8.2. [0m[1m[37mExecuting OPT_MERGE pass (detect identical cells).
+[0mFinding identical cells in module `\maj3'.
+Computing hashes of 4 cells of `\maj3'.
+Finding duplicate cells in `\maj3'.
+Removed a total of 0 cells.
+
+[1m[36m2.8.3. [0m[1m[37mExecuting OPT_MUXTREE pass (detect dead branches in mux trees).
+[0mRunning muxtree optimizer on module \maj3..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+[1m[36m2.8.4. [0m[1m[37mExecuting OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+[0m  Optimizing cells in module \maj3.
+Performed a total of 0 changes.
+
+[1m[36m2.8.5. [0m[1m[37mExecuting OPT_MERGE pass (detect identical cells).
+[0mFinding identical cells in module `\maj3'.
+Computing hashes of 4 cells of `\maj3'.
+Finding duplicate cells in `\maj3'.
+Removed a total of 0 cells.
+
+[1m[36m2.8.6. [0m[1m[37mExecuting OPT_DFF pass (perform DFF optimizations).
+[0m
+[1m[36m2.8.7. [0m[1m[37mExecuting OPT_CLEAN pass (remove unused cells and wires).
+[0mFinding unused cells or wires in module \maj3..
+
+[1m[36m2.8.8. [0m[1m[37mExecuting OPT_EXPR pass (perform const folding).
+[0mOptimizing module maj3.
+
+[1m[36m2.8.9. [0m[1m[37mFinished fast OPT passes. (There is nothing left to do.)
+[0m
+[1m[36m2.9. [0m[1m[37mExecuting FSM pass (extract and optimize FSM).
+[0m
+[1m[36m2.9.1. [0m[1m[37mExecuting FSM_DETECT pass (finding FSMs in design).
+[0m
+[1m[36m2.9.2. [0m[1m[37mExecuting FSM_EXTRACT pass (extracting FSM from design).
+[0m
+[1m[36m2.9.3. [0m[1m[37mExecuting FSM_OPT pass (simple optimizations of FSMs).
+[0m
+[1m[36m2.9.4. [0m[1m[37mExecuting OPT_CLEAN pass (remove unused cells and wires).
+[0mFinding unused cells or wires in module \maj3..
+
+[1m[36m2.9.5. [0m[1m[37mExecuting FSM_OPT pass (simple optimizations of FSMs).
+[0m
+[1m[36m2.9.6. [0m[1m[37mExecuting FSM_RECODE pass (re-assigning FSM state encoding).
+[0m
+[1m[36m2.9.7. [0m[1m[37mExecuting FSM_INFO pass (dumping all available information on FSM cells).
+[0m
+[1m[36m2.9.8. [0m[1m[37mExecuting FSM_MAP pass (mapping FSMs to basic logic).
+[0m
+[1m[36m2.10. [0m[1m[37mExecuting OPT pass (performing simple optimizations).
+[0m
+[1m[36m2.10.1. [0m[1m[37mExecuting OPT_EXPR pass (perform const folding).
+[0mOptimizing module maj3.
+
+[1m[36m2.10.2. [0m[1m[37mExecuting OPT_MERGE pass (detect identical cells).
+[0mFinding identical cells in module `\maj3'.
+Computing hashes of 4 cells of `\maj3'.
+Finding duplicate cells in `\maj3'.
+Removed a total of 0 cells.
+
+[1m[36m2.10.3. [0m[1m[37mExecuting OPT_MUXTREE pass (detect dead branches in mux trees).
+[0mRunning muxtree optimizer on module \maj3..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+[1m[36m2.10.4. [0m[1m[37mExecuting OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+[0m  Optimizing cells in module \maj3.
+Performed a total of 0 changes.
+
+[1m[36m2.10.5. [0m[1m[37mExecuting OPT_MERGE pass (detect identical cells).
+[0mFinding identical cells in module `\maj3'.
+Computing hashes of 4 cells of `\maj3'.
+Finding duplicate cells in `\maj3'.
+Removed a total of 0 cells.
+
+[1m[36m2.10.6. [0m[1m[37mExecuting OPT_DFF pass (perform DFF optimizations).
+[0m
+[1m[36m2.10.7. [0m[1m[37mExecuting OPT_CLEAN pass (remove unused cells and wires).
+[0mFinding unused cells or wires in module \maj3..
+
+[1m[36m2.10.8. [0m[1m[37mExecuting OPT_EXPR pass (perform const folding).
+[0mOptimizing module maj3.
+
+[1m[36m2.10.9. [0m[1m[37mFinished fast OPT passes. (There is nothing left to do.)
+[0m
+[1m[36m2.11. [0m[1m[37mExecuting WREDUCE pass (reducing word size of cells).
+[0m
+[1m[36m2.12. [0m[1m[37mExecuting PEEPOPT pass (run peephole optimizers).
+[0m
+[1m[36m2.13. [0m[1m[37mExecuting OPT_CLEAN pass (remove unused cells and wires).
+[0mFinding unused cells or wires in module \maj3..
+
+[1m[36m2.14. [0m[1m[37mExecuting ALUMACC pass (create $alu and $macc cells).
+[0mExtracting $alu and $macc cells in module maj3:
+  created 0 $alu and 0 $macc cells.
+
+[1m[36m2.15. [0m[1m[37mExecuting SHARE pass (SAT-based resource sharing).
+[0m
+[1m[36m2.16. [0m[1m[37mExecuting OPT pass (performing simple optimizations).
+[0m
+[1m[36m2.16.1. [0m[1m[37mExecuting OPT_EXPR pass (perform const folding).
+[0mOptimizing module maj3.
+
+[1m[36m2.16.2. [0m[1m[37mExecuting OPT_MERGE pass (detect identical cells).
+[0mFinding identical cells in module `\maj3'.
+Computing hashes of 4 cells of `\maj3'.
+Finding duplicate cells in `\maj3'.
+Removed a total of 0 cells.
+
+[1m[36m2.16.3. [0m[1m[37mExecuting OPT_MUXTREE pass (detect dead branches in mux trees).
+[0mRunning muxtree optimizer on module \maj3..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+[1m[36m2.16.4. [0m[1m[37mExecuting OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+[0m  Optimizing cells in module \maj3.
+Performed a total of 0 changes.
+
+[1m[36m2.16.5. [0m[1m[37mExecuting OPT_MERGE pass (detect identical cells).
+[0mFinding identical cells in module `\maj3'.
+Computing hashes of 4 cells of `\maj3'.
+Finding duplicate cells in `\maj3'.
+Removed a total of 0 cells.
+
+[1m[36m2.16.6. [0m[1m[37mExecuting OPT_DFF pass (perform DFF optimizations).
+[0m
+[1m[36m2.16.7. [0m[1m[37mExecuting OPT_CLEAN pass (remove unused cells and wires).
+[0mFinding unused cells or wires in module \maj3..
+
+[1m[36m2.16.8. [0m[1m[37mExecuting OPT_EXPR pass (perform const folding).
+[0mOptimizing module maj3.
+
+[1m[36m2.16.9. [0m[1m[37mFinished fast OPT passes. (There is nothing left to do.)
+[0m
+[1m[36m2.17. [0m[1m[37mExecuting MEMORY pass.
+[0m
+[1m[36m2.17.1. [0m[1m[37mExecuting OPT_MEM pass (optimize memories).
+[0mPerformed a total of 0 transformations.
+
+[1m[36m2.17.2. [0m[1m[37mExecuting OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+[0mPerformed a total of 0 transformations.
+
+[1m[36m2.17.3. [0m[1m[37mExecuting OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+[0m
+[1m[36m2.17.4. [0m[1m[37mExecuting MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+[0m
+[1m[36m2.17.5. [0m[1m[37mExecuting MEMORY_DFF pass (merging $dff cells to $memrd).
+[0m
+[1m[36m2.17.6. [0m[1m[37mExecuting OPT_CLEAN pass (remove unused cells and wires).
+[0mFinding unused cells or wires in module \maj3..
+
+[1m[36m2.17.7. [0m[1m[37mExecuting MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+[0m
+[1m[36m2.17.8. [0m[1m[37mExecuting OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+[0mPerformed a total of 0 transformations.
+
+[1m[36m2.17.9. [0m[1m[37mExecuting OPT_CLEAN pass (remove unused cells and wires).
+[0mFinding unused cells or wires in module \maj3..
+
+[1m[36m2.17.10. [0m[1m[37mExecuting MEMORY_COLLECT pass (generating $mem cells).
+[0m
+[1m[36m2.18. [0m[1m[37mExecuting OPT_CLEAN pass (remove unused cells and wires).
+[0mFinding unused cells or wires in module \maj3..
+
+[1m[36m2.19. [0m[1m[37mExecuting OPT pass (performing simple optimizations).
+[0m
+[1m[36m2.19.1. [0m[1m[37mExecuting OPT_EXPR pass (perform const folding).
+[0mOptimizing module maj3.
+
+[1m[36m2.19.2. [0m[1m[37mExecuting OPT_MERGE pass (detect identical cells).
+[0mFinding identical cells in module `\maj3'.
+Computing hashes of 4 cells of `\maj3'.
+Finding duplicate cells in `\maj3'.
+Removed a total of 0 cells.
+
+[1m[36m2.19.3. [0m[1m[37mExecuting OPT_DFF pass (perform DFF optimizations).
+[0m
+[1m[36m2.19.4. [0m[1m[37mExecuting OPT_CLEAN pass (remove unused cells and wires).
+[0mFinding unused cells or wires in module \maj3..
+
+[1m[36m2.19.5. [0m[1m[37mFinished fast OPT passes.
+[0m
+[1m[36m2.20. [0m[1m[37mExecuting MEMORY_MAP pass (converting memories to logic and flip-flops).
+[0m
+[1m[36m2.21. [0m[1m[37mExecuting OPT pass (performing simple optimizations).
+[0m
+[1m[36m2.21.1. [0m[1m[37mExecuting OPT_EXPR pass (perform const folding).
+[0mOptimizing module maj3.
+
+[1m[36m2.21.2. [0m[1m[37mExecuting OPT_MERGE pass (detect identical cells).
+[0mFinding identical cells in module `\maj3'.
+Computing hashes of 4 cells of `\maj3'.
+Finding duplicate cells in `\maj3'.
+Removed a total of 0 cells.
+
+[1m[36m2.21.3. [0m[1m[37mExecuting OPT_MUXTREE pass (detect dead branches in mux trees).
+[0mRunning muxtree optimizer on module \maj3..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+[1m[36m2.21.4. [0m[1m[37mExecuting OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+[0m  Optimizing cells in module \maj3.
+Performed a total of 0 changes.
+
+[1m[36m2.21.5. [0m[1m[37mExecuting OPT_MERGE pass (detect identical cells).
+[0mFinding identical cells in module `\maj3'.
+Computing hashes of 4 cells of `\maj3'.
+Finding duplicate cells in `\maj3'.
+Removed a total of 0 cells.
+
+[1m[36m2.21.6. [0m[1m[37mExecuting OPT_SHARE pass.
+[0m
+[1m[36m2.21.7. [0m[1m[37mExecuting OPT_DFF pass (perform DFF optimizations).
+[0m
+[1m[36m2.21.8. [0m[1m[37mExecuting OPT_CLEAN pass (remove unused cells and wires).
+[0mFinding unused cells or wires in module \maj3..
+
+[1m[36m2.21.9. [0m[1m[37mExecuting OPT_EXPR pass (perform const folding).
+[0mOptimizing module maj3.
+
+[1m[36m2.21.10. [0m[1m[37mFinished fast OPT passes. (There is nothing left to do.)
+[0m
+[1m[36m2.22. [0m[1m[37mExecuting TECHMAP pass (map to technology primitives).
+[0m
+[1m[36m2.22.1. [0m[1m[37mExecuting Verilog-2005 frontend: /share/techmap.v
+[0mParsing Verilog input from `/share/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+[1m[36m2.22.2. [0m[1m[37mContinuing TECHMAP pass.
+[0mUsing extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $or.
+No more expansions possible.
+<suppressed ~81 debug messages>
+
+[1m[36m2.23. [0m[1m[37mExecuting OPT pass (performing simple optimizations).
+[0m
+[1m[36m2.23.1. [0m[1m[37mExecuting OPT_EXPR pass (perform const folding).
+[0mOptimizing module maj3.
+
+[1m[36m2.23.2. [0m[1m[37mExecuting OPT_MERGE pass (detect identical cells).
+[0mFinding identical cells in module `\maj3'.
+Computing hashes of 4 cells of `\maj3'.
+Finding duplicate cells in `\maj3'.
+Removed a total of 0 cells.
+
+[1m[36m2.23.3. [0m[1m[37mExecuting OPT_DFF pass (perform DFF optimizations).
+[0m
+[1m[36m2.23.4. [0m[1m[37mExecuting OPT_CLEAN pass (remove unused cells and wires).
+[0mFinding unused cells or wires in module \maj3..
+
+[1m[36m2.23.5. [0m[1m[37mFinished fast OPT passes.
+[0m
+[1m[36m2.24. [0m[1m[37mExecuting ABC pass (technology mapping using ABC).
+[0m
+[1m[36m2.24.1. [0m[1m[37mSummary of detected clock domains:
+[0m  4 cells in clk={ }, en={ }, arst={ }, srst={ }
+
+[1m[36m2.24.2. [0m[1m[37mExtracting gate netlist of module `\maj3' to `<abc-temp-dir>/input.blif'..
+[0mNo matching clock domain found. Not extracting any FF cells.
+
+[1m[36m2.24.2.1. [0m[1m[37mExecuted ABC.
+[0mExtracted 4 gates and 7 wires to a netlist network with 3 inputs and 1 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+[1m[36m2.24.2.2. [0m[1m[37mRe-integrating ABC results.
+[0mABC RESULTS:              NAND cells:        3
+ABC RESULTS:                OR cells:        1
+ABC RESULTS:        internal signals:        3
+ABC RESULTS:           input signals:        3
+ABC RESULTS:          output signals:        1
+Removing temp directory.
+Removing global temp directory.
+
+[1m[36m2.25. [0m[1m[37mExecuting OPT pass (performing simple optimizations).
+[0m
+[1m[36m2.25.1. [0m[1m[37mExecuting OPT_EXPR pass (perform const folding).
+[0mOptimizing module maj3.
+
+[1m[36m2.25.2. [0m[1m[37mExecuting OPT_MERGE pass (detect identical cells).
+[0mFinding identical cells in module `\maj3'.
+Computing hashes of 4 cells of `\maj3'.
+Finding duplicate cells in `\maj3'.
+Removed a total of 0 cells.
+
+[1m[36m2.25.3. [0m[1m[37mExecuting OPT_DFF pass (perform DFF optimizations).
+[0m
+[1m[36m2.25.4. [0m[1m[37mExecuting OPT_CLEAN pass (remove unused cells and wires).
+[0mFinding unused cells or wires in module \maj3..
+Removed 0 unused cells and 7 unused wires.
+<suppressed ~1 debug messages>
+
+[1m[36m2.25.5. [0m[1m[37mFinished fast OPT passes.
+[0m
+[1m[36m2.26. [0m[1m[37mExecuting HIERARCHY pass (managing design hierarchy).
+[0mAttribute `top' found on module `maj3'. Setting top module to maj3.
+
+[1m[36m2.26.1. [0m[1m[37mAnalyzing design hierarchy..
+[0mTop module:  \maj3
+
+[1m[36m2.26.2. [0m[1m[37mAnalyzing design hierarchy..
+[0mTop module:  \maj3
+Removed 0 unused modules.
+
+[1m[36m2.27. [0m[1m[37mPrinting statistics.
+[0m
+=== maj3 ===
+
+        +----------Local Count, excluding submodules.
+        | 
+        7 wires
+        7 wire bits
+        4 public wires
+        4 public wire bits
+        4 ports
+        4 port bits
+        4 cells
+        3   $_NAND_
+        1   $_OR_
+
+[1m[36m2.28. [0m[1m[37mExecuting CHECK pass (checking for obvious problems).
+[0mChecking module maj3...
+Found and reported 0 problems.
+
+[1m[36m3. [0m[1m[37mExecuting ABC pass (technology mapping using ABC).
+[0m
+[1m[36m3.1. [0m[1m[37mSummary of detected clock domains:
+[0m  4 cells in clk={ }, en={ }, arst={ }, srst={ }
+
+[1m[36m3.2. [0m[1m[37mExtracting gate netlist of module `\maj3' to `<abc-temp-dir>/input.blif'..
+[0mNo matching clock domain found. Not extracting any FF cells.
+
+[1m[36m3.2.1. [0m[1m[37mExecuted ABC.
+[0mExtracted 4 gates and 7 wires to a netlist network with 3 inputs and 1 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+[1m[36m3.2.2. [0m[1m[37mRe-integrating ABC results.
+[0mABC RESULTS:              NAND cells:        4
+ABC RESULTS:               NOT cells:        2
+ABC RESULTS:        internal signals:        3
+ABC RESULTS:           input signals:        3
+ABC RESULTS:          output signals:        1
+Removing temp directory.
+Removing global temp directory.
+
+[1m[36m4. [0m[1m[37mExecuting OPT_CLEAN pass (remove unused cells and wires).
+[0mFinding unused cells or wires in module \maj3..
+Removed 0 unused cells and 7 unused wires.
+<suppressed ~1 debug messages>
+
+[1m[36m5. [0m[1m[37mPrinting statistics.
+[0m
+=== maj3 ===
+
+        +----------Local Count, excluding submodules.
+        | 
+        9 wires
+        9 wire bits
+        4 public wires
+        4 public wire bits
+        4 ports
+        4 port bits
+        6 cells
+        4   $_NAND_
+        2   $_NOT_
+
+[1m[36m6. [0m[1m[37mExecuting BLIF backend.
+[0m
+End of script. Logfile hash: ed05dedf65, time: 0.36s, user: 0.38s, system: 0.00s
+Yosys 0.69+62 (git sha1 0edda7a3a, Release, Clang /workspace/YoWASP/yosys/wasi-sdk-33.0-x86_64-linux/share/cmake/../..//bin/clang++ 22.1.0)
+Time spent: 38% 2x abc (0 sec), 14% 3x read_verilog (0 sec), ...

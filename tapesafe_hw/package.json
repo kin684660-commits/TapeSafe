@@ -1,0 +1,17 @@
+{
+  "name": "tapesafe_hw",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "synth": "node --experimental-wasm-exnref synth.mjs",
+    "netlist": "node blif2nl.mjs tapesafe_policy.blif && node blif2nl.mjs maj3.blif && node blif2nl.mjs approval_reg.blif",
+    "test": "node sim.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@yowasp/yosys": "^0.70.62-dev.1236"
+  }
+}

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TapeSafe — 可验证的团队审批电路</title>
+<meta name="description" content="X Layer 上的 74 NAND 团队审批电路：发起人不计票、必签成员、紧急冻结。体验网表重放并核验真实主网部署。">
+<link rel="stylesheet" href="app.css?v=10">
+</head>
+<body>
+<div class="shell">
+<header>
+  <div class="brand">
+    <svg class="mark" viewBox="0 0 42 42" aria-hidden="true">
+      <polygon points="21,3 37,12 37,30 21,39 5,30 5,12" fill="#0b0c0e" stroke="#e0b07a" stroke-width="1.3"/>
+      <circle cx="21" cy="21" r="5.2" fill="none" stroke="#7ee2a8" stroke-width="1.2"/>
+      <text x="18.2" y="24.2" fill="#7ee2a8" font-size="9" font-family="ui-monospace,monospace">1</text>
+    </svg>
+    <div>
+      <h1>TapeSafe</h1>
+      <p class="eyebrow">X Layer · unaudited prototype</p>
+    </div>
+  </div>
+  <div class="row"><button id="refresh" class="ghost" type="button">刷新状态</button><button id="connect" class="primary" type="button">连接钱包</button></div>
+</header>
+<nav id="nav"></nav>
+<main id="app" aria-live="polite"></main>
+<footer>未审计原型。TapeOut 的工厂、电路 beacon、容器 beacon 都可升级，TapeSafe 的安全上限就是这些管理员密钥。演示只放小额。</footer>
+</div>
+<script src="config.js"></script>
+<script src="abi.js"></script>
+<script src="policy.js"></script>
+<script src="demo.js"></script>
+<script src="app.js?v=10"></script>
+</body>
+</html>

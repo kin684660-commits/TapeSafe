@@ -17,6 +17,6 @@ npx remotion render src/index.ts TapeSafe-Demo-ZH-28s output/TapeSafe-Demo-ZH-28
 
 0–4 秒：团队审批问题；4–8 秒：产品和电路规格；8–15 秒：两票通过、自批无效、冻结拒绝；15–22 秒：主网部署与双 RPC 求值；22–28 秒：项目愿景口号，附部署范围小字。
 
-截图来自实际页面操作；这是截图剪辑演示，不是连续录屏。实验室在浏览器执行网表，核验页是实际主网只读结果。`public/capture-record.json` 保存核验文本，`public/audio-source.json` 保存配乐和旁白来源。
+截图来自实际页面操作；这是截图剪辑演示，不是连续录屏。实验室在浏览器执行网表，核验页是实际主网只读结果。`public/` 保留视频使用的截图与音频，`public/audio-source.json` 记录配乐和旁白来源。
 
 本次仅处理器和规则电路已部署，执行器/金库未部署；未审计，底层协议可升级。
